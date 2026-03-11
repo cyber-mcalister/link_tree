@@ -1,0 +1,128 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: white;
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza tudo horizontalmente */
+    min-height: 100vh;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px; /* Espaço fixo abaixo do cabeçalho */
+}
+
+.foto-perfil {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover; /* Faz a foto preencher o círculo sem esticar */
+    border: 4px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+/* Esse p é a sua bio embaixo do nome */
+header p {
+    opacity: 0.8;
+    font-size: 0.95rem;
+    max-width: 400px;
+    margin-bottom: 0; /* Removido o margin gigante que estava empurrando tudo */
+}
+
+.links-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    max-width: 350px;
+    margin: 40px 0; /* Dá espaço em cima e embaixo dos botões */
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 15px 20px;
+    border-radius: 8px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+a:hover {
+    background-color: #ef4444;
+    box-shadow: 0 8px 25px rgba(239, 68, 68, 0.4);
+    transform: translateY(-4px);
+    border-color: white;
+}
+
+footer {
+    width: 100%;
+    max-width: 400px;
+    margin-top: auto; /* Único elemento que deve ter margin-top auto para ir pro fim */
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+}
+
+footer p {
+    font-size: 0.6rem;        
+    text-transform: uppercase;
+    letter-spacing: 1.5px;    
+    opacity: 0.4;
+    transition: all 0.4s ease;
+    width: 100%;
+    white-space: nowrap;
+}
+
+footer p:hover {
+  opacity: 1;
+    color: #ffffff;
+    letter-spacing: 3px;      /* Expansão controlada para não deformar o layout */
+    text-shadow: 
+        0 0 8px #ef4444, 
+        0 0 15px #ef4444;     /* Neon brilhante mas sem "borrar" o texto */
+    transform: scale(1.05);   /* Aumento sutil de 5% */
+    cursor: pointer
+}
+
+.link-soon {
+    display: block;               /* Garante que ele se comporte como os outros botões */
+    text-decoration: none;        /* Tira o sublinhado */
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ef4444;    /* Mantém a borda vermelha Poets */
+    color: white;
+    opacity: 0.5;                 /* Deixa ele mais "apagadinho" visualmente */
+    cursor: not-allowed;          /* Mostra o ícone de 'proibido' no mouse */
+    transition: all 0.3s ease;    /* Suaviza o brilho no hover */
+}
+
+.link-soon:hover {
+    opacity: 1;                   /* Ele acende 100% ao passar o mouse */
+    background-color: rgba(239, 68, 68, 0.1); /* Um leve fundo vermelho */
+    box-shadow: 0 0 15px #ef4444; /* O famoso brilho neon que você curtiu */
+    transform: scale(1.02);       /* Ele dá aquela leve "saltada" */
+}
+
+.link-soon:active {
+    pointer-events: none;
+}
