@@ -107,7 +107,7 @@ footer p:hover {
     display: block;               /* Garante que ele se comporte como os outros botões */
     text-decoration: none;        /* Tira o sublinhado */
     padding: 15px;
-    margin-bottom: 15px;
+    margin-bottom: 3px;
     border-radius: 8px;
     border: 1px solid #ef4444;    /* Mantém a borda vermelha Poets */
     color: white;
